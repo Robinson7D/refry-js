@@ -27,19 +27,24 @@ _For words tests to work, one must have /usr/share/dict/words_
 ### Speed
 
 #### Words
->Comparing SPEED, 235887 dictionary words, using seed: 1393
+
+```
+Comparing SPEED, 235887 dictionary words, using seed: 1393
 refry Murmur2 port x 34.54 ops/sec ±0.40% (59 runs sampled)
 refry Murmur2 port descending-modified x 37.16 ops/sec ±1.27% (63 runs sampled)
 internet example x 26.83 ops/sec ±0.27% (47 runs sampled)
 Fastest is refry Murmur2 port descending-modified
+```
 
 #### Ascending Integers
->Testing SPEED, 1000000 ascending Integers, using seed: 1393
+
+```
+Testing SPEED, 1000000 ascending Integers, using seed: 1393
 refry Murmur2 port x 26.96 ops/sec ±2.86% (48 runs sampled)
 refry Murmur2 port descending-modified x 33.12 ops/sec ±0.25% (57 runs sampled)
 internet example x 14.98 ops/sec ±0.18% (41 runs sampled)
 Fastest is refry Murmur2 port descending-modified
-
+```
 
 ### Collisions
 
@@ -52,15 +57,21 @@ Some seeds benefit descending, some benefit ascending; on average they're very c
 This mostly acts as a sanity check 😻
 
 #### Words
->Testing 235887 dictionary words, using seed: 1393
+
+```
+Testing 235887 dictionary words, using seed: 1393
 Collisions detected for refry Murmur2 port: 2
 Collisions detected for refry Murmur2 port descending-modified: 2
 Collisions detected for internet example: 2
 Fewest collisions detected on: refry Murmur2 port
+```
 
 #### Ascending Integers
->Testing 1000000 ascending Integers, using seed: 1393
+
+```
+Testing 1000000 ascending Integers, using seed: 1393
 Collisions detected for refry Murmur2 port: 41
 Collisions detected for refry Murmur2 port descending-modified: 35
 Collisions detected for internet example: 41
 Fewest collisions detected on: refry Murmur2 port descending-modified
+```
