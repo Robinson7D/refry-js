@@ -30,9 +30,9 @@ _For words tests to work, one must have /usr/share/dict/words_
 
 ```
 Comparing SPEED, 235887 dictionary words, using seed: 1393
-refry Murmur2 port x 34.54 ops/sec ±0.40% (59 runs sampled)
-refry Murmur2 port descending-modified x 37.16 ops/sec ±1.27% (63 runs sampled)
-internet example x 26.83 ops/sec ±0.27% (47 runs sampled)
+refry Murmur2 port x 35.10 ops/sec ±1.93% (59 runs sampled)
+refry Murmur2 port descending-modified x 36.80 ops/sec ±0.73% (62 runs sampled)
+internet example x 27.09 ops/sec ±0.35% (48 runs sampled)
 Fastest is refry Murmur2 port descending-modified
 ```
 
@@ -40,9 +40,9 @@ Fastest is refry Murmur2 port descending-modified
 
 ```
 Testing SPEED, 1000000 ascending Integers, using seed: 1393
-refry Murmur2 port x 26.96 ops/sec ±2.86% (48 runs sampled)
-refry Murmur2 port descending-modified x 33.12 ops/sec ±0.25% (57 runs sampled)
-internet example x 14.98 ops/sec ±0.18% (41 runs sampled)
+refry Murmur2 port x 26.76 ops/sec ±2.29% (47 runs sampled)
+refry Murmur2 port descending-modified x 28.79 ops/sec ±0.43% (50 runs sampled)
+internet example x 14.77 ops/sec ±0.40% (40 runs sampled)
 Fastest is refry Murmur2 port descending-modified
 ```
 

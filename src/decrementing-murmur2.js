@@ -22,14 +22,18 @@ function decrMurmur2_32(seed, str) {
     curValue = str.charCodeAt(position--)
             | (str.charCodeAt(position--) <<  8)
             | (str.charCodeAt(position--) << 16)
-            | (str.charCodeAt(position--) << 24);
+            | (str.charCodeAt(position--) << 24); // Get 4 bytes
 
     curValue = IMUL(curValue, M);
-    curValue ^= curValue >>> 24 ;
+    curValue ^= curValue >>> 24;
 
     h = IMUL(h, M) ^ IMUL(curValue, M); // Hash curValue back into h
   }
 
+  return mixInFinalBytes(h, str, position) >>> 0;
+}
+
+function mixInFinalBytes(h, str, position){ // For some reason this helps perf...
   switch(position) {
     case 2: h ^= str.charCodeAt(position--) << 16;
     case 1: h ^= str.charCodeAt(position--) << 8;
@@ -39,9 +43,7 @@ function decrMurmur2_32(seed, str) {
 
   h ^= (h >>> 13);
   h = IMUL(h, M);
-  h ^= (h >>> 15);
-
-  return h;
+  return (h ^ (h >>> 15));
 }
 
 // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul
